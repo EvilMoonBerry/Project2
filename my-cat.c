@@ -12,20 +12,25 @@ int main (int argc, char *argv[]) {
     ssize_t line;
 
     // Check if the file can be oppened
-    fptr = fopen(argv[1], "r");
-    if (fptr == NULL) {
-        fprintf(stderr, "error: cannot open file %s\n", argv[1]);
-        exit(1);
+
+    if (argc == 1){
+        return 0;
     }
 
-
-    //Loop through file lines and print them
-    while ((line = getline(&part, &len, fptr)) != -1){
-        printf("%s", part);
+    for (int i = 1; i< argc;i++){
+        fptr = fopen(argv[i], "r");
+        if (fptr == NULL) {
+            fprintf(stderr, "my-cat: cannot open file %s\n", argv[1]);
+            exit(1);
+        }
+        else{
+            //Loop through file lines and print them
+            while ((line = getline(&part, &len, fptr)) != -1){
+                printf("%s", part);
+            }
+            fclose(fptr);
+            free(part);
+        }
     }
-    
-    printf("\n");
-    fclose(fptr);
-    free(part);
     return 0;
 }
