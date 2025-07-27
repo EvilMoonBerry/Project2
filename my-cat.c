@@ -12,11 +12,10 @@ int main (int argc, char *argv[]) {
     ssize_t line;
 
     // Check if the file can be oppened
-
     if (argc == 1){
         return 0;
     }
-
+    //Error if file can not be opened
     for (int i = 1; i< argc;i++){
         fptr = fopen(argv[i], "r");
         if (fptr == NULL) {

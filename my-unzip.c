@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 //still needs expections, details, comments, 
 
 
@@ -12,19 +13,20 @@ int unzipWord(char *s)
 {
 
     int i = 0;
+    char character;
     
     while(i<strlen(s)){
-        int j = 1;
-        while(s[i]==s[i+j]){
-            j++;
+        int x = 0;
+        while(isdigit(s[i])){
+            x = x *10+(s[i]-'0');
+            i++;
         }
-        
-        for(int x=0;x<=j;++x){
-            printf("%c",s[i]);
+        character = s[i];
+        for(int j = 0; j < x; j++){
+            printf("%c",character);
         }
-        //}
 
-        i+=j;
+        i++;
     }
     return 0;
 }
