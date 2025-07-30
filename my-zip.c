@@ -29,7 +29,7 @@ int zipWord(char *s, FILE *fp)
             sprintf(ziptext,"%d%c",j,s[i]);
             fwrite(ziptext,1,strlen(ziptext),fp);
             free(ziptext);
-        }
+        
 
         i+=j;
     }
@@ -66,7 +66,7 @@ int main (int argc, char *argv[]) {
         //Strip users’ input of newline
         zipfile[strcspn(zipfile, "\n")] = '\0';
         //Error if file can not be opened
-        output_fp = fopen(zipfile,"w");
+        output_fp = fopen(zipfile,"a");
         if(!output_fp){
             fprintf(stderr, "my-zip: cannot open file %s\n", zipfile);
             exit(1);
