@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
+#include <unistd.h> //https://en.wikipedia.org/wiki/Unistd.h 
 #include <ctype.h>
 
 int unzipWord(char *s)
@@ -15,6 +15,7 @@ int unzipWord(char *s)
     while(i<strlen(s)){
         int x = 0;
         // Parse number and charachter combination
+        //https://stackoverflow.com/questions/16644906/how-to-check-if-a-string-is-a-number 
         while(isdigit(s[i])){
             x = x *10+(s[i]-'0');
             i++;

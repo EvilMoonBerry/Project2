@@ -72,6 +72,7 @@ int main (int argc, char *argv[]) {
                 exit(1);
             }
             //Divide a line from file to words and compare them to the searched word. If match print that line and repeat
+            //https://opensource.com/article/22/4/parsing-data-strtok-c 
             token = strtok(copy_part, " ,.!?;:(){}[]+\"\"\n\t\r");
             found = 0;
             while(token !=NULL){
