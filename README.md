@@ -14,12 +14,12 @@ My-cat: Tulostaa kättäjän antamat tiedstot sisällön suoraan käyttäjälle.
 ./my-cat input.txt input2.txt...
 ```
 
-My-grep: Etsii annetuista tiedostoista käyttäjän antamaa sanaa ja tulostaatälle kaikki rivit missä sana ilmenee.
+My-grep: Etsii annetuista tiedostoista käyttäjän antamaa sanaa ja tulostaa tälle kaikki rivit missä sana ilmenee.
 ```
 my-grep: searchterm input.txt input2.txt
 ```
 
-My-zip: Muutta annettujen tiedostojen sisällön nelitavuisen kokonaisluvun binäärimuotoon jota seuraa Ascii muotoinen yksittäinen merkki ja kirjoittaa tämän toiseen tiedostoon. Näin toivottavasti pienentäen tiedsoton kokoa.
+My-zip: Muutta annettujen tiedostojen sisällön nelitavuisen kokonaisluvun binäärimuotoon jota seuraa Ascii muotoinen yksittäinen merkki ja kirjoittaa tämän toiseen tiedostoon. Näin toivottavasti pienentäen tiedoston kokoa.
 ```
 ./my-zip input.txt input2.txt > testzip.z
 ```
