@@ -5,10 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <ctype.h>
-//still needs expections, details, comments, 
 
-
-// write in file in a new format
 int unzipWord(char *s)
 {
 
@@ -17,11 +14,14 @@ int unzipWord(char *s)
     
     while(i<strlen(s)){
         int x = 0;
+        // Parse number and charachter combination
         while(isdigit(s[i])){
             x = x *10+(s[i]-'0');
             i++;
         }
+
         character = s[i];
+        //Print the charachter x times for user to see
         for(int j = 0; j < x; j++){
             printf("%c",character);
         }
@@ -38,12 +38,12 @@ int main (int argc, char *argv[]) {
     size_t len =0;
     ssize_t line;
     
-
+    //Error if user does not give enough arguments
     if (argc == 1){
         printf("my-unzip: file1 [file2 ...]");
         exit(1);
     }
-
+    //Loop through input files
     for (int i = 1; i< argc;i++){
         fptr = fopen(argv[i], "r");
         if (fptr == NULL) {
@@ -52,7 +52,6 @@ int main (int argc, char *argv[]) {
         }
         else{
             //Loop through file lines
-            printf(argv[i]);
             while ((line = getline(&part, &len, fptr)) != -1){
                 unzipWord(part);
             }
