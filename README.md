@@ -1,5 +1,5 @@
 # Käyttöjärjestelmä ja systeemiohjelmointi projekti 2: Unix Utilities
-## Tämän tehtävän tarkoitus on tehdäuseampi pieni ohjelma jotka matkivat UNIX:sta tuttuja toimintoja
+## Tämän tehtävän tarkoitus on tehdä useampi pieni ohjelma jotka matkivat UNIX:sta tuttuja toimintoja
 
 Pohjustus:
 ```
